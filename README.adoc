@@ -1,0 +1,4 @@
+= Programmier-Grundlagen mit Go
+
+Dieses Repo enthält Codebeispiele und Erklärungen für eine Programmier-Einführung mit
+der Programmiersprache Go.
