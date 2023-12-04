@@ -6,3 +6,7 @@
 	path = submodules/distdocs
 	url = https://github.com/src2crs/distdocs
 	branch = main
+[submodule "submodules/src2listings"]
+	path = submodules/src2listings
+	url = https://github.com/src2crs/src2listings
+	branch = develop
