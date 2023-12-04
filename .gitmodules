@@ -2,3 +2,7 @@
 	path = submodules/latex-buildsystem
 	url = https://github.com/src2crs/latex-buildsystem
 	branch = main
+[submodule "submodules/distdocs"]
+	path = submodules/distdocs
+	url = https://github.com/src2crs/distdocs
+	branch = main
