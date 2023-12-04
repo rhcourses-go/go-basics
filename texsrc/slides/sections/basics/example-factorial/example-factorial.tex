@@ -1,0 +1,136 @@
+\def\exampletable{
+    \begin{tabularx}{\textwidth}{r|X}
+        \textbf{Berechnung} & \textbf{Zwischenergebnis} \\
+        \hline
+        $1$             & $1$ \\
+        $2 \cdot 1$     & $2$ \\
+        $3 \cdot 2$     & $6$ \\
+        $4 \cdot 6$     & $24$ \\
+        $5 \cdot 24$    & $120$ \\
+    \end{tabularx}
+}
+
+\def\explanationfile{\examplesdir/factorial/explanation.go}
+\newcommand{\stepwisefactorial}{\inputsrcfile[linerange={5-9}]{\explanationfile}}
+\newcommand{\loopfactorial}{\inputsrcfile[linerange={16-19}]{\explanationfile}}
+\newcommand{\loopgeneralized}{\inputsrcfile[linerange={26-29}]{\explanationfile}}
+\newcommand{\factorialfunction}{\inputsrcfile[linerange={25-32}]{\explanationfile}}
+\newcommand{\backwardsfunction}{\inputsrcfile[linerange={36-43}]{\explanationfile}}
+\newcommand{\recursive}{\inputsrcfile[linerange={47-52}]{\explanationfile}}
+
+\begin{fframe}
+    \begin{block}{Ziel: Berechne $5!$ }
+        \begin{itemize}
+            \item Es gilt: $5! = 1 \cdot 2 \cdot 3 \cdot 4 \cdot 5 = 120$
+            \item<2-> Kann schrittweise mit Zwischenergebnissen berechnet werden:
+                      \exampletable
+            \item<3-> So ähnlich würde man es auf Papier berechnen.
+            \item<3-> Ziel: Automatisiere die Berechnung.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \begin{block}{Umsetzung der Schritt-Für-Schritt-Berechnung}
+        \stepwisefactorial
+        \vspace{.5ex}
+        \onslide<2->{\exampletable}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \begin{block}{Umsetzung der Schritt-Für-Schritt-Berechnung}
+        \stepwisefactorial
+    \end{block}
+    \begin{itemize}
+        \item Problem: Die Berechnung ist sehr starr.
+        \item Umständlich aufzuschreiben und anzupassen.
+        \item<2-> Lösung: Schleifen
+    \end{itemize}
+\end{fframe}
+
+\begin{fframe}
+    \begin{block}{Schrittweise Berechnung wie zuvor}
+        \stepwisefactorial
+    \end{block}
+    \begin{block}<2->{Berechnung mit Schleife}
+        \loopfactorial
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \begin{block}{Berechnung mit Schleife}
+        \loopfactorial
+    \end{block}
+    \begin{block}<2->{Vorteile:}
+        \begin{itemize}
+            \item kompakterer Code
+            \item Nur an einer Stelle ändern, um $n$ zu ändern.
+            \item Nächster Schritt: $n$ durch eine Variable ersetzen.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \begin{block}{Berechnung von $5!$}
+        \loopfactorial
+    \end{block}
+    \begin{block}<2->{Berechnung von $n!$}
+        \loopgeneralized
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \begin{block}{Berechnung von $n!$}
+        \loopgeneralized
+    \end{block}
+    \begin{block}<2->{Vorteile:}
+        \begin{itemize}
+            \item Flexibel, $n$ kann z.B. eingelesen oder berechnet werden.
+        \end{itemize}
+    \end{block}
+    \begin{block}<3->{Nachteile:}
+        \begin{itemize}
+            \item Code kann noch nicht wiederverwendet werden.
+            \item Muss ggf. an mehrere Stellen kopiert werden.
+            \item<4-> Nächster Schritt: Funktionen
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \begin{block}{Berechnung von $n!$}
+        \factorialfunction
+    \end{block}
+    \begin{block}<2->{Beobachtungen:}
+        \begin{itemize}
+            \item Code ist in einer \alert{Funktion} \emph{eingepackt}.
+            \item Die Funktion kann an anderer Stelle verwendet werden.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \begin{block}{Alternative: Rückwärts laufende Schleife}
+        \backwardsfunction
+    \end{block}
+    \begin{block}<2->{Beobachtungen:}
+        \begin{itemize}
+            \item Die Schleife hat einen \alert{Zähler} und eine \alert{Abbruchbedingung}.
+            \item<3-> \alert{Eines der wichtigsten Konzepte in der Programmierung!}
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \begin{block}{Alternative: Rekursive Berechnung}
+        \recursive
+    \end{block}
+    \begin{block}<2->{Basiert auf folgender Beobachtung:}
+        \vspace{-3ex}
+        \begin{align*}
+            n! &= n \cdot \text{\colorbox{red!10!white}{$(n-1) \cdot (n-2) \cdots 2 \cdot 1$}} \\
+               &= n \cdot \text{\colorbox{red!10!white}{$(n-1)!$}}
+        \end{align*}
+    \end{block}
+\end{fframe}
