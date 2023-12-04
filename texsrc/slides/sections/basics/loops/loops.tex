@@ -1,0 +1,106 @@
+\newcommand{\srcfileblock}[2]{
+    \begin{block}{#1}
+        \inputsrcfile[linerange={#2}]{\examplesdir/loops/loops.go}
+    \end{block}
+}
+
+\begin{fframe}
+    \srcfileblock{Genereller Aufbau einer Schleife}{6-8}
+    \begin{block}<2->{Erläuterungen:}
+        \begin{itemize}
+            \item Oft wird ein \alert{Zähler}, der in jedem Schleifendurchlauf \alert{inkrementiert} wird.
+            \item<3-> Die Schleife läuft solange, wie die \alert{Bedingung} erfüllt ist.
+            \item<4-> Der Zähler ist meist eine \texttt{int}-Variable und startet bei $0$.
+            \item<5-> Schleifen können aber auch rückwärts laufen oder komplexere Bedingungen haben.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \srcfileblock{Beispiel: Zahlen auflisten}{12-16}
+    \begin{block}<2->{Erläuterungen:}
+        \begin{itemize}
+            \item Gibt die Zahlen von $0$ bis $n-1$ auf der Konsole aus.
+            \item Hat dabei $n$ Schleifendurchläufe.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \srcfileblock{Beispiel: Zahlen rückwärts auflisten}{19-23}
+    \begin{block}<2->{Erläuterungen:}
+        \begin{itemize}
+            \item Gibt die Zahlen von $n$ bis $1$ rückwärts auf der Konsole aus.
+            \item Hat dabei $n$ Schleifendurchläufe.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \srcfileblock{Beispiel: Gerade Zahlen auflisten}{26-32}
+    \begin{block}<2->{Erläuterungen:}
+        \begin{itemize}
+            \item Gibt die geraden Zahlen von $0$ bis $n-1$ auf der Konsole aus.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \srcfileblock{Beispiel: Vielfache auflisten}{35-41}
+    \begin{block}<2->{Erläuterungen:}
+        \begin{itemize}
+            \item Gibt alle Vielfachen von $m$ auf der Konsole aus, die kleiner als $n-1$ sind.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \srcfileblock{Beispiel: Vielfache auflisten}{45-49}
+    \begin{block}<2->{Erläuterungen:}
+        \begin{itemize}
+            \item Gibt alle Vielfachen von $m$ auf der Konsole aus, die kleiner als $n-1$ sind.
+            \item Wie zuvor, aber eine Schleife, die größere Schritte macht.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \srcfileblock{Beispiel: Summe berechnen}{52-59}
+    \begin{block}<2->{Erläuterungen:}
+        \begin{itemize}
+            \item Berechnet die Summe der Zahlen von $1$ bis $n$.
+            \item Gibt nichts aus, sondern hat ein Rechenergebnis, das mit \texttt{return} zurückgegeben wird.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \srcfileblock{Beispiel: Summe berechnen (rekursiv)}{63-68}
+    \begin{block}<2->{Erläuterungen:}
+        \begin{itemize}
+            \item Berechnet die Summe der Zahlen von $1$ bis $n$.
+            \item Rekursiver Ansatz, ähnlich wie schon bei der Fakultät.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \srcfileblock{Beispiel: Primzahltest}{71-78}
+    \begin{block}<2->{Erläuterungen:}
+        \begin{itemize}
+            \item Prüft für alle $i$ zwischen $2$ und $n-1$, ob $n$ durch $i$ teilbar ist.
+            \item Gibt \texttt{true} zurück, wenn $n$ eine Primzahl ist, sonst \texttt{false}.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \srcfileblock{Beispiel: While-Schleife}{82-89}
+    \begin{block}<2->{Erläuterungen:}
+        \begin{itemize}
+            \item Berechnet wieder die Summe der Zahlen von $1$ bis $n$.
+            \item Verwendet dafür eine \alert{\texttt{while}-Schleife}.
+            \item Die Schleife läuft solange, wie die Bedingung erfüllt ist.
+        \end{itemize}
+    \end{block}
+\end{fframe}
