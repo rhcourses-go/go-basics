@@ -1,0 +1,62 @@
+\newcommand{\intvariablessrcblock}{
+    \begin{block}{Integer-Variablen}
+        \inputsrcfile[linerange={5-11}]{\examplesdir/concepts/variables.go}
+    \end{block}
+}
+
+\newcommand{\stringvariablessrcblock}{
+    \begin{block}{String-Variablen}
+        \inputsrcfile[linerange={13-20}]{\examplesdir/concepts/variables.go}
+    \end{block}
+}
+
+\newcommand{\listvariablessrcblock}{
+    \begin{block}{Listen-Variablen}
+        \inputsrcfile[linerange={22-32}]{\examplesdir/concepts/variables.go}
+    \end{block}
+}
+
+\begin{fframe}
+    \begin{block}{Wichtige Bestandteile von Programmen: \alert{Variablen}}
+        \begin{itemize}
+            \item<1-> Variablen sind \alert{Speicherplätze} für Werte.
+            \item<2-> Müssen \alert{deklariert} werden.
+            \item<3-> Anschließend können darin Werte gespeichert werden
+                    und man kann mit diesen Werten rechnen.
+        \end{itemize}
+    \end{block}
+    \begin{block}<4->{Technische Sicht}
+        \begin{itemize}
+            \item<4-> Variablen sind \alert{Speicherbereiche} im \emph{Arbeitsspeicher}.
+            \item<5-> Die Größe des Bereichs hängt vom \alert{Typ} der Variable ab.
+            \item<6-> Der Typ einer Variable muss bei der Deklaration klar sein.
+            \begin{itemize}
+                \item<7-> Notwendig, um den Speicher korrekt zu reservieren.
+                \item<7-> Nützlich, um das Programm vorab auf Fehler zu überprüfen.
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \intvariablessrcblock
+    \begin{itemize}
+        \item<2-> Deklaration: \alert{Reservieren von Speicher}
+        \item<2-> Rechnen mit den Werten ist möglich.
+    \end{itemize}
+\end{fframe}
+
+\begin{fframe}
+    \stringvariablessrcblock
+    \begin{itemize}
+        \item<2-> Wie bei Integern, nur der \alert{Typ} ist anders.
+        \item<2-> Auch mit Strings kann gerechnet werden.
+    \end{itemize}
+\end{fframe}
+
+\begin{fframe}
+    \listvariablessrcblock
+    \begin{itemize}
+        \item<2-> Listen sind (theoretisch) unbegrenzt.
+    \end{itemize}
+\end{fframe}
