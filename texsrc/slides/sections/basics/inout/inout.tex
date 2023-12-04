@@ -1,0 +1,33 @@
+\newcommand{\simpleinoutsrcblock}{
+    \begin{block}{Einlesen von Benutzereingaben}
+        \inputsrcfile[linerange={1-8,14-15}][]{\examplesdir/userinput/userinput.go}
+    \end{block}
+}
+
+\newcommand{\advancedinoutsrcblock}{
+    \begin{block}{... mit Überprüfung der Eingabe.}
+        \inputsrcfile[linerange={5-15}]{\examplesdir/userinput/userinput.go}
+    \end{block}
+}
+
+\begin{fframe}
+    \begin{block}{Wichtiger Aspekt: Interaktion mit dem Benutzer}
+        \begin{itemize}
+            \item Geschieht über das Package \alert{\texttt{fmt}}.
+            \begin{itemize}
+                \item<2-> \texttt{fmt} steht für \emph{format}.
+                \item<2-> Bietet Funktionen zum Einlesen und Ausgeben von Daten.
+            \end{itemize}
+            \item<3-> Schon bekannt: \texttt{fmt.Println()}.
+            \item<4-> \texttt{fmt.Scan()} liest eine Eingabe ein.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+
+\begin{fframe}
+    \simpleinoutsrcblock
+\end{fframe}
+
+\begin{fframe}
+    \advancedinoutsrcblock
+\end{fframe}
