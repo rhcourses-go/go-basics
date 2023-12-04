@@ -1,3 +1,6 @@
+\usepackage{distdocs}
+\usepackage{src2listings}
+
 \usepackage[ngerman]{babel}
 
 \title{Go-Grundlagen}
@@ -6,12 +9,15 @@
 
 \setbeamertemplate{empty}
 
-\begin{document}
+\newcommand{\examplesdir}{../../examples}
 
+\begin{document}
     \maketitle
 
     \begin{frame}{Inhalt}
         \tableofcontents
     \end{frame}
+
+    \importsubdir{sections}
 
 \end{document}

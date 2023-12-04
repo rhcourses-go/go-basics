@@ -1,0 +1,44 @@
+\newcommand{\helloworldsrcblock}{
+    \begin{block}{Das erste Programm}
+        \inputsrcfile{\examplesdir/helloworld/helloworld.go}
+    \end{block}
+}
+
+\begin{fframe}
+    \helloworldsrcblock
+    \begin{block}<2->{Zeile 1: Definition des Pakets, zu dem die Datei gehört.}
+        \begin{itemize}
+            \item Jedes Programm gehört zu einem \alert{Paket}.
+            \item Dient zur Strukturierung von komplexerem Code.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+\begin{fframe}
+    \helloworldsrcblock
+    \begin{block}{Zeile 3: Import-Statement}
+        \begin{itemize}
+            \item Importiert ein anderes Paket.
+                  (Hier: \texttt{fmt} für \emph{format}).
+            \item Wird für die Ausgabe benötigt.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+\begin{fframe}
+    \helloworldsrcblock
+    \begin{block}{ab Zeile 5: \texttt{main}-Funktion}
+        \begin{itemize}
+            \item Jedes Programm muss eine \texttt{main}-Funktion enthalten.
+            \item Wird beim Start des Programms ausgeführt.
+        \end{itemize}
+    \end{block}
+\end{fframe}
+\begin{fframe}
+    \helloworldsrcblock
+    \begin{block}{Zeile 6: Ausgabe}
+        \begin{itemize}
+            \item \texttt{fmt.Println} gibt aus, was in den Klammern steht.
+            \item \texttt{fmt} ist ein Paketname,
+                  \texttt{Println} eine \alert{Funktion}.
+        \end{itemize}
+    \end{block}
+\end{fframe}
